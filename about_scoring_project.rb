@@ -55,8 +55,8 @@ def score(dice)
     elsif(num == 5)
       factor = 50 
     end
-    puts "Factor: " + factor.to_s
-    puts "Total1: " + total.to_s
+    #puts "Factor: " + factor.to_s
+    #puts "Total1: " + total.to_s
     next if excluded.count(num) > 0
     if(dice.count(num) >= 3)
       total += (dice.count(num) - 3) * factor
@@ -64,7 +64,7 @@ def score(dice)
       total += dice.count(num) * factor
     end
     excluded << num
-    puts "Total2: " + total.to_s
+    #puts "Total2: " + total.to_s
   end
 
   total
